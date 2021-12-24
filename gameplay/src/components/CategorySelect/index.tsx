@@ -1,10 +1,11 @@
 import { 
-  ScrollView,
+  ScrollView, Text,
 } from "react-native";
 
 import { styles } from './styles';
 import { categories } from '../../utils/categories';
 import { Category } from "../Category";
+import { RectButton } from "react-native-gesture-handler";
 
 interface CategorySelectProps {
   categorySelected: string;
