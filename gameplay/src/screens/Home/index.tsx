@@ -2,7 +2,6 @@ import { useState } from "react";
 import { 
   View, 
   FlatList,
-  Text, 
 } from "react-native";
 
 import { styles } from './styles';
@@ -11,6 +10,7 @@ import { Profile } from "../../components/Profile";
 import { ButtonAdd } from "../../components/ButtonAdd";
 import { CategorySelect } from "../../components/CategorySelect";
 import { ListHeader } from "../../components/ListHeader";
+import { Appointment } from "../../components/Appointment";
 
 export function Home() {
   const [category, setCategory] = useState('');
@@ -56,9 +56,9 @@ export function Home() {
             data={appointments}
             keyExtractor={item => item.id}
             renderItem={({item}) => (
-              <Text>
-                {item.description}
-              </Text>
+              <Appointment 
+                data={item}
+              />
             )}
           />
         </View>
