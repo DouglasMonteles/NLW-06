@@ -4,13 +4,19 @@ import {
   View,
   ScrollView,
 } from 'react-native';
-import { styles } from './styles';
+import { useNavigation } from '@react-navigation/native';
 
+import { styles } from './styles';
 import { ButtonIcon } from '../../components/ButtonIcon';
 
 import IllustrationImg from '../../assets/illustration.png';
 
 export function SignIn() {
+  const navigation = useNavigation<any>();
+
+  function handleSignIn() {
+    navigation.navigate('Home');
+  }
 
   return (
     <ScrollView>
@@ -36,6 +42,7 @@ export function SignIn() {
           <ButtonIcon 
             title="Entrar com Discord"
             activeOpacity={0.7}
+            onPress={handleSignIn}
           />
         </View>
       </View>
