@@ -5,6 +5,7 @@ import { theme } from '../global/styles/theme';
 import { Home } from "../screens/Home";
 import { SignIn } from "../screens/SignIn";
 import { AppointmentDetails } from '../screens/AppointmentDetails';
+import { AppointmentCreate } from '../screens/AppointmentCreate';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +33,11 @@ export function AuthRoutes() {
       <Stack.Screen 
         name="AppointmentDetails"
         component={AppointmentDetails}
+      />
+
+      <Stack.Screen 
+        name="AppointmentCreate"
+        component={AppointmentCreate}
       />
     </Stack.Navigator>
   );
