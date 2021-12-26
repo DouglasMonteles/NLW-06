@@ -1,5 +1,5 @@
 import { 
-  KeyboardAvoidingView, 
+  KeyboardAvoidingView,  
   Platform, 
   ScrollView, 
   Text, 
@@ -139,6 +139,8 @@ export function AppointmentCreate() {
             </View>
           </View>
       </ScrollView>
+
+      
     </KeyboardAvoidingView>
   );
 }
