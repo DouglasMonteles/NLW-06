@@ -14,8 +14,9 @@ export const styles = StyleSheet.create({
     width: 39,
     height: 2,
     borderRadius: 2,
-    color: theme.colors.secondary50,
+    backgroundColor: theme.colors.secondary30,
     alignSelf: 'center',
     marginTop: 13,
+    marginBottom: 103,
   },
 });
