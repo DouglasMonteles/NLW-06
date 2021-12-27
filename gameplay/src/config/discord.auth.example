@@ -1,0 +1,8 @@
+// TROQUE O .example DESTE AQUIVO POR .ts OU 
+// CRIE OUTRO ARQUIVO NESTE DIRETÓRIO COM NOME discord.auth.ts E COLE ESTAS INFORMAÇÕES
+
+const REDIRECT_URI = '';
+const EXCOPE = '';
+const RSPONSE_TYPE = 'token';
+const CLIENT_ID = '';
+const CDN_IMAGE = 'https://discordapp.com';
