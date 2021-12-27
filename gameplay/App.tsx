@@ -10,8 +10,9 @@ import {
   Rajdhani_700Bold,
 } from '@expo-google-fonts/rajdhani';
 
+import { AuthProvider } from './src/hooks/auth';
+
 import { Background } from './src/components/Background';
-import { AuthContext } from './src/context/auth';
 import { Routes } from './src/routes';
 
 export default function App() {
@@ -33,13 +34,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <AuthContext.Provider value={{
-        name: 'Douglas',
-        email: 'silvadouglas328@gmail.com',
-        avatar: 'douglas.png',
-      }}>
+      <AuthProvider>
         <Routes />
-      </AuthContext.Provider>
+      </AuthProvider>
     </Background>
   );
 }

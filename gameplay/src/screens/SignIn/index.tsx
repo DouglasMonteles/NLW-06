@@ -1,4 +1,3 @@
-import { useContext } from 'react';
 import { 
   Image, 
   Text, 
@@ -11,15 +10,15 @@ import { styles } from './styles';
 
 import IllustrationImg from '../../assets/illustration.png';
 
+import { useAuth } from '../../hooks/auth';
+
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { Background } from '../../components/Background';
-import { AuthContext } from '../../context/auth';
 
 export function SignIn() {
   const navigation = useNavigation<any>();
-  const context = useContext(AuthContext);
-
-  console.log(context)
+  const { user } = useAuth();
+  console.log(user)
 
   function handleSignIn() {
     navigation.navigate('Home');
