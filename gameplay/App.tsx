@@ -11,6 +11,7 @@ import {
 } from '@expo-google-fonts/rajdhani';
 
 import { Background } from './src/components/Background';
+import { AuthContext } from './src/context/auth';
 import { Routes } from './src/routes';
 
 export default function App() {
@@ -32,7 +33,13 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Routes />
+      <AuthContext.Provider value={{
+        name: 'Douglas',
+        email: 'silvadouglas328@gmail.com',
+        avatar: 'douglas.png',
+      }}>
+        <Routes />
+      </AuthContext.Provider>
     </Background>
   );
 }
