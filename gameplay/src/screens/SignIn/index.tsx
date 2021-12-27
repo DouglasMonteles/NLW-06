@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import { 
   Image, 
   Text, 
@@ -12,9 +13,13 @@ import IllustrationImg from '../../assets/illustration.png';
 
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { Background } from '../../components/Background';
+import { AuthContext } from '../../context/auth';
 
 export function SignIn() {
   const navigation = useNavigation<any>();
+  const context = useContext(AuthContext);
+
+  console.log(context)
 
   function handleSignIn() {
     navigation.navigate('Home');
