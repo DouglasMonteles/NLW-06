@@ -1,4 +1,4 @@
-const REDIRECT_URI = '';
+const REDIRECT_URI = 'Teste';
 const EXCOPE = '';
 const RSPONSE_TYPE = 'token';
 const CLIENT_ID = '';
