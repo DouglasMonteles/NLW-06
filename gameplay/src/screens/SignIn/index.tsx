@@ -3,8 +3,8 @@ import {
   Text, 
   View,
   ScrollView,
+  Alert,
 } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 import { styles } from './styles';
 
@@ -16,12 +16,15 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 import { Background } from '../../components/Background';
 
 export function SignIn() {
-  const navigation = useNavigation<any>();
-  const { user } = useAuth();
-  console.log(user)
+  const { user, signIn } = useAuth();
 
-  function handleSignIn() {
-    navigation.navigate('Home');
+  async function handleSignIn() {
+    try {
+      await signIn();
+    } catch (error) {
+      console.log(error);
+      Alert.alert(`${error}`);
+    }
   }
 
   return (
