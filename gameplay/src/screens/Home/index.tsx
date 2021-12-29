@@ -98,7 +98,6 @@ export function Home() {
         <CategorySelect 
           categorySelected={category}
           setCategory={handleCategorySelected}
-          hasCheckBox
         />
 
         <ListHeader 
