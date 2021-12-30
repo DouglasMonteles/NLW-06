@@ -1,15 +1,40 @@
-import { Image } from "react-native";
+import { 
+  Image, 
+  View,
+} from "react-native";
+
+import DiscordSvg from '../../assets/discord.svg';
 
 import { styles } from "./styles";
 
-export function GuildIcon() {
-  const uri = 'https://www.iphoned.nl/wp-content/uploads/2017/07/discord-580x375.jpg';
+const { CDN_IMAGE } = process.env;
+
+interface GuildIcon {
+  guildId: string;
+  iconId: string | null;
+}
+
+export function GuildIcon({ guildId, iconId } : GuildIcon) {
+  const uri = `${CDN_IMAGE}/icons/${guildId}/${iconId}.png`;
 
   return (
-    <Image 
-      source={{ uri }}
-      style={styles.image}
-      resizeMode="cover"
-    />
+    <View style={styles.container}>
+      {
+        (iconId)
+        ? (
+          <Image 
+            source={{ uri }}
+            style={styles.image}
+            resizeMode="cover"
+          />
+        )
+        : (
+          <DiscordSvg 
+            width={40}
+            height={44}
+          />
+        )
+      }
+    </View>
   );
 }
