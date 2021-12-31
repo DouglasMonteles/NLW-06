@@ -19,6 +19,7 @@ export function Guilds({ handleGuildSelect } : GuildsProps) {
   async function fetchGuilds() {
     const response = await api.get('/users/@me/guilds');
 
+    console.log(response.data)
     setGuilds(response.data);
     setLoading(false);
   }
